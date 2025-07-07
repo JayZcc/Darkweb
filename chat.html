@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Chat</title>
+  <script>
+    function sendMsg() {
+      let chatBox = document.getElementById("chat");
+      let input = document.getElementById("msg").value;
+      chatBox.innerHTML += "<div>🕶️ " + input + "</div>";
+      document.getElementById("msg").value = "";
+    }
+  </script>
+</head>
+<body style="background:black;color:lime;font-family:monospace;">
+  <h2>💬 ฟอรัมลับ</h2>
+  <div id="chat" style="border:1px solid gray; padding:10px; height:200px; overflow:auto;"></div><br>
+  <input id="msg" placeholder="พิมพ์ข้อความ" style="width:80%;">
+  <button onclick="sendMsg()">ส่ง</button>
+</body>
+</html>

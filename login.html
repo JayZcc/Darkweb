@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <script>
+    function login() {
+      const user = document.getElementById("user").value;
+      const pass = document.getElementById("pass").value;
+      if(user === "tester" && pass === "1234"){
+        window.location.href = "dark.html";
+      } else {
+        alert("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง");
+      }
+    }
+  </script>
+</head>
+<body style="background:black;color:white;font-family:monospace;">
+  <h2>🔐 เข้าสู่ระบบ</h2>
+  <input id="user" placeholder="ชื่อผู้ใช้"><br><br>
+  <input id="pass" placeholder="รหัสผ่าน" type="password"><br><br>
+  <button onclick="login()">เข้าสู่ระบบ</button>
+</body>
+</html>

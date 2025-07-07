@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Zone</title>
+  <script>
+    function loginAdmin() {
+      const code = document.getElementById("code").value;
+      if(code === "zxcvbnm112211") {
+        document.getElementById("panel").style.display = "block";
+        document.getElementById("login").style.display = "none";
+      } else {
+        alert("รหัสไม่ถูกต้อง");
+      }
+    }
+  </script>
+</head>
+<body style="background:black;color:white;font-family:monospace;">
+  <div id="login">
+    <h2>🔐 เข้าสู่ระบบแอดมิน</h2>
+    <input id="code" placeholder="รหัสแอดมิน" type="password"><br><br>
+    <button onclick="loginAdmin()">เข้าสู่ระบบ</button>
+  </div>
+
+  <div id="panel" style="display:none;">
+    <h2>🛠️ แผงควบคุมแอดมิน</h2>
+    <p>✅ คุณสามารถแก้ไขข้อความในหน้าเว็บ, เพิ่มลิงก์, หรือแบนไอพี (ในอนาคต)</p>
+    <ul>
+      <li>✔️ เพิ่มประกาศหน้าแรก</li>
+      <li>✔️ ตรวจสอบประวัติแชท</li>
+      <li>🚧 ระบบแบนยังไม่เปิดใช้งาน</li>
+    </ul>
+  </div>
+</body>
+</html>
